@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Nastaliq+Urdu:wght@400;600;700&family=Outfit:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-page: #FAF7F0;
+  --text-primary: #1C2B21;
+  --text-secondary: #4A5B50;
+  --surface: #FFFFFF;
+  --surface-hover: #F3EFE6;
+  --surface-border: #E6DFC5;
+  --brand-emerald: #0A3D27;
+  --brand-gold: #C29B38;
+}
+
+body.dark-mode {
+  --bg-page: #0C1511;
+  --text-primary: #EDE8D8;
+  --text-secondary: #9EB0A4;
+  --surface: #15211B;
+  --surface-hover: #1B2C24;
+  --surface-border: #23382D;
+  --brand-emerald: #14532D;
+  --brand-gold: #D4AF37;
+}
+
+body.sepia-mode {
+  --bg-page: #F4ECD8;
+  --text-primary: #2C2214;
+  --text-secondary: #5C4A32;
+  --surface: #FCF7ED;
+  --surface-hover: #EFE4CC;
+  --surface-border: #DFD0B0;
+  --brand-emerald: #1B4332;
+  --brand-gold: #B8860B;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  font-family: 'Noto Nastaliq Urdu', 'Urdu Typesetting', serif;
+  line-height: 2.4;
+  direction: rtl;
+  text-align: right;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.font-quran {
+  font-family: 'Amiri', 'Traditional Arabic', serif;
+  line-height: 2.2;
+}
+
+.font-sans {
+  font-family: 'Outfit', sans-serif;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+/* Header & Nav */
+header.site-header {
+  position: sticky;
+  top: 0;
+  background: var(--surface);
+  border-bottom: 1px solid var(--surface-border);
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.nav-links a {
+  margin-left: 16px;
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 14px;
+}
+.nav-links a:hover { color: var(--brand-emerald); }
+
+.reading-controls button {
+  background: var(--surface-hover);
+  border: 1px solid var(--surface-border);
+  color: var(--text-primary);
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  margin-right: 6px;
+}
+
+/* Reading Layout */
+.chapter-box {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: 20px;
+  padding: 32px 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.quran-box {
+  background: var(--surface);
+  border: 2px solid var(--brand-gold);
+  border-radius: 16px;
+  padding: 24px;
+  margin: 20px 0;
+}
+.quran-arabic {
+  font-size: 26px;
+  color: var(--brand-emerald);
+  margin-bottom: 12px;
+}
+.quran-trans {
+  font-size: 17px;
+  color: var(--text-primary);
+}
+.quran-ref {
+  display: inline-block;
+  background: rgba(10, 61, 39, 0.1);
+  color: var(--brand-emerald);
+  padding: 2px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.hadith-box {
+  background: var(--surface-hover);
+  border-right: 4px solid var(--brand-gold);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.story-box {
+  background: rgba(194, 155, 56, 0.08);
+  border-radius: 16px;
+  padding: 24px;
+  margin: 20px 0;
+}
+
+.dua-box {
+  background: var(--brand-emerald);
+  color: #FFFFFF;
+  border-radius: 16px;
+  padding: 24px;
+  margin: 24px 0;
+}
+.dua-box .quran-arabic { color: #F4E8C1; }
+.dua-box .quran-trans { color: #FAF7F0; }
+
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--surface-border);
+}
+.btn-nav {
+  background: var(--brand-emerald);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+.btn-nav:hover { opacity: 0.9; }
+
+footer.site-footer {
+  text-align: center;
+  padding: 30px;
+  border-top: 1px solid var(--surface-border);
+  color: var(--text-secondary);
+  font-size: 13px;
+  margin-top: 40px;
+}

@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-page: #FAF7F0;
+    --text-primary: #1C2B21;
+    --text-secondary: #4A5B50;
+    --surface: #FFFFFF;
+    --surface-hover: #F3EFE6;
+    --surface-border: #E6DFC5;
+    --brand-emerald: #0A3D27;
+    --brand-gold: #C29B38;
+    --brand-gold-light: #F4E8C1;
+    --brand-accent: #155734;
+  }
+
+  body.theme-dark {
+    --bg-page: #0C1511;
+    --text-primary: #EDE8D8;
+    --text-secondary: #9EB0A4;
+    --surface: #15211B;
+    --surface-hover: #1B2C24;
+    --surface-border: #23382D;
+    --brand-emerald: #14532D;
+    --brand-gold: #D4AF37;
+    --brand-gold-light: #2A3622;
+    --brand-accent: #22C55E;
+  }
+
+  body.theme-sepia {
+    --bg-page: #F4ECD8;
+    --text-primary: #2C2214;
+    --text-secondary: #5C4A32;
+    --surface: #FCF7ED;
+    --surface-hover: #EFE4CC;
+    --surface-border: #DFD0B0;
+    --brand-emerald: #1B4332;
+    --brand-gold: #B8860B;
+    --brand-gold-light: #EADCB8;
+    --brand-accent: #2D6A4F;
+  }
+}
+
+.font-urdu {
+  font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Urdu Typesetting', serif;
+  line-height: 2.3;
+}
+
+.font-quran {
+  font-family: 'Amiri', 'Traditional Arabic', serif;
+  line-height: 2.0;
+}
+
+.font-sans-ui {
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Nastaliq text adjustments */
+.urdu-reading-text {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 2.4;
+  letter-spacing: -0.01em;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+::-webkit-scrollbar-thumb {
+  background: #C29B38;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0A3D27;
+}
+
+/* Islamic arabesque border pattern */
+.islamic-border {
+  border-image: linear-gradient(to right, #0A3D27, #C29B38, #0A3D27) 1;
+}
+
+/* Print styling */
+@media print {
+  nav, header, footer, .no-print, button {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 13pt !important;
+  }
+  .print-page {
+    page-break-after: always;
+  }
+}
